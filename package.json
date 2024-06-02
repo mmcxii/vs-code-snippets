@@ -3,6 +3,11 @@
   "displayName": "@mmcxii/vs-code-snippets",
   "description": "",
   "version": "0.0.1",
+  "publisher": "mmcxii",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmcxii/vs-code-snippets"
+  },
   "engines": {
     "vscode": "^1.89.0"
   },
