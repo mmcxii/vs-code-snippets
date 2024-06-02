@@ -1,0 +1,30 @@
+{
+    "Creates an index file for a component with a container": {
+        "prefix": "rcci",
+        "body": [
+            "export {",
+            "  ${1:${TM_FILENAME_BASE}}Container as ${1:${TM_FILENAME_BASE}},",
+            "  type ${1:${TM_FILENAME_BASE}}ContainerProps as ${1:${TM_FILENAME_BASE}}Props,",
+            "} from \"./${2:container}\";"
+        ],
+        "description": "Creates an index file for a component with a container."
+    },
+
+    "Create a new AAA Test": {
+        "prefix": "aaa",
+        "body": [
+            "it(\"$1\", ${2:async} () => {",
+            "  //* Arrange",
+            "  $3",
+            "",
+            "  //* Act",
+            "  $4",
+            "",
+            "  //* Assert",
+            "  $5",
+            "",
+            "})"
+        ],
+        "description": "Creates a new unit test."
+    },
+}

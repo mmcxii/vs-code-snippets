@@ -1,0 +1,100 @@
+{
+    // Components
+    "React Component With Props": {
+        "prefix": "rcp",
+        "isFileTemplate": true,
+        "body": [
+            "import * as React from \"react\";",
+            "",
+            "export type ${1:${TM_FILENAME_BASE}}Props = {",
+            "  $2",
+            "};",
+            "",
+            "export const ${1:${TM_FILENAME_BASE}}: React.FC<${1:${TM_FILENAME_BASE}}Props> = (props) => {",
+            "  const { $3 } = props;",
+            "",
+            "  $4",
+            "",
+            "  return (",
+            "    $5",
+            "  );",
+            "};"
+        ],
+        "description": "Creates a React Component With Props"
+    },
+    "React Component Without Props": {
+        "prefix": "rcn",
+        "isFileTemplate": true,
+        "body": [
+            "import * as React from \"react\";",
+            "",
+            "export const ${1:${TM_FILENAME_BASE}}: React.FC = () => {",
+            "  $2",
+            "",
+            "  return (",
+            "    $3",
+            "  );",
+            "};"
+        ],
+        "description": "Creates a React Component Without Props"
+    },
+    "React Container Component": {
+        "prefix": "rcc",
+        "isFileTemplate": true,
+        "body": [
+            "import * as React from \"react\";",
+            "import { ${1:${TM_FILENAME_BASE}}, type ${1:${TM_FILENAME_BASE}}Props } from \"./${2:component}\";",
+            "",
+            "export type ${1:${TM_FILENAME_BASE}}ContainerProps = Omit<${1:${TM_FILENAME_BASE}}Props, \"${3}\">;",
+            "",
+            "export const ${1:${TM_FILENAME_BASE}}Container: React.FC<${1:${TM_FILENAME_BASE}}ContainerProps> = (props) => {",
+            "  $4",
+            "",
+            "  return (",
+            "    <${1:${TM_FILENAME_BASE}} {...props} />",
+            "  );",
+            "};"
+        ],
+        "description": "Creates a React Container Component"
+    },
+
+    // Tests
+    "Creates a new Test File":{
+        "prefix": "rct",
+        "isFileTemplate": true,
+        "body": [
+            "import { render, screen } from \"@testing-library/react\";",
+            "import { ${1:ComponentName}, type ${1:ComponentName}Props } from \"./${2:component}\";",
+            "",
+            "describe(\"${1:ComponentName}\", () => {",
+            "  let testProps: ${1:ComponentName}Props;",
+            "",
+            "  beforeEach(() => {",
+            "    testProps = {",
+            "      $3",
+            "    };",
+            "  });",
+            "",
+            "$4",
+            "});"
+        ],
+        "description": "Creates a new test file using @testing-library/react."
+    },
+    "Create a new AAA Test": {
+        "prefix": "aaa",
+        "body": [
+            "it(\"$1\", ${2:async} () => {",
+            "  //* Arrange",
+            "  $3",
+            "",
+            "  //* Act",
+            "  $4",
+            "",
+            "  //* Assert",
+            "  $5",
+            "",
+            "})"
+        ],
+        "description": "Creates a new unit test."
+    },
+}
