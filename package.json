@@ -20,5 +20,12 @@
         "path": "./snippets/typescript-react.code-snippets"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "2.26.1"
+  },
+  "scripts": {
+    "vsce:publish": "vsce publish",
+    "vsce:package": "vsce package"
   }
 }
