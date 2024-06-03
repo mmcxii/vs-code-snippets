@@ -27,10 +27,12 @@
     ]
   },
   "devDependencies": {
-    "@vscode/vsce": "2.26.1"
+    "@vscode/vsce": "2.26.1",
+    "update-changelog": "1.0.2"
   },
   "scripts": {
     "vsce:publish": "vsce publish",
-    "vsce:package": "vsce package"
+    "vsce:package": "vsce package",
+    "changelog": "update-changelog && git add -A"
   }
 }
